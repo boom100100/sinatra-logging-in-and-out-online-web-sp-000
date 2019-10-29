@@ -19,12 +19,12 @@ class ApplicationController < Sinatra::Base
 
       redirect to '/account'
     else
-    
+
       "Sign in failed. You will be redirected in 5 seconds."
       sleep(5)
       redirect to '/'
     end
-    
+
   end
 
   get '/account' do
