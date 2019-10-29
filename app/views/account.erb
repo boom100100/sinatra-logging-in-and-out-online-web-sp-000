@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <h1><%= @user.username %></h1>
-    <p><%= @user.balance %></p>
+    <h1><%= Helpers.current_user.username %></h1>
+    <p><%= Helpers.current_user.balance %></p>
 
   </body>
 </html>
