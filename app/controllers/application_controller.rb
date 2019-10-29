@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.where("username == ?", params[:username])
     if @user
-      session[:user_id] = @user[:id].to_s
+      #session[:user_id] = @user[:id].to_s
     #@user = Helpers.current_user(session)
     #if @user
 
