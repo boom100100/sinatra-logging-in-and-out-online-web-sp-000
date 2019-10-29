@@ -29,11 +29,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    #if @user
+    if Helpers.is_logged_in?
       erb :account
-    #else
-      #{}"You must log in before viewing this page."
-    #end
+    else
+      "You must log in before viewing this page."
+    end
   end
 
   get '/logout' do
