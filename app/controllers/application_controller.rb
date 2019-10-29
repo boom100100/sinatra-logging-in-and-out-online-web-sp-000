@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
     @user = User.find_by(username: params["username"], password: params["password"])
     #@user = User.where("username == ?", params[:username])
     if @user
-      #session[:user_id] = @user[:id].to_s
+      session[:user_id] = @user.id
     #@user = Helpers.current_user(session)
     #if @user
 
