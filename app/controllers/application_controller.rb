@@ -28,6 +28,7 @@ class ApplicationController < Sinatra::Base
       erb :account
     else
       "You must log in before viewing this page."
+    end
   end
 
   get '/logout' do
