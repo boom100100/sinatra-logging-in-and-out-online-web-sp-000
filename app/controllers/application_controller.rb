@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     if Helpers.is_logged_in?
       erb :account
     else
-      redirect to '/'
+      "You must log in before viewing this page."
   end
 
   get '/logout' do
