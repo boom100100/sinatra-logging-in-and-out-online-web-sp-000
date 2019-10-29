@@ -11,9 +11,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    session[:user_id] = User.find(params[:username]).id
     @user = Helpers.current_user(session)
     #if @user
-      session[:user_id] = @user.id
+      
       redirect to '/account'
     #else
     #  "Sign in failed. You will be redirected in 5 seconds."
