@@ -20,8 +20,7 @@ class ApplicationController < Sinatra::Base
 
       redirect to '/account'
     else
-
-      "You Must <a href=\"/\">Log In</a> to View Your Balance"
+      redirect to '/error'
     end
 
   end
@@ -30,13 +29,17 @@ class ApplicationController < Sinatra::Base
     if Helpers.is_logged_in?
       erb :account
     else
-      "You must log in before viewing this page."
+      redirect to '/error'
     end
   end
 
   get '/logout' do
     session.clear
     redirect to '/'
+  end
+
+  get '/error' do
+    erb :error
   end
 
 
