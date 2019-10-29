@@ -21,9 +21,7 @@ class ApplicationController < Sinatra::Base
       redirect to '/account'
     else
 
-      "Sign in failed. You will be redirected in 5 seconds."
-      sleep(5)
-      redirect to '/'
+      "You Must <a href=\"/\">Log In</a> to View Your Balance"
     end
 
   end
