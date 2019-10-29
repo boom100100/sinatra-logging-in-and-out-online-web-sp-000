@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     #if @user
       erb :account
     #else
-      "You must log in before viewing this page."
+      #{}"You must log in before viewing this page."
     #end
   end
 
