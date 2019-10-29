@@ -29,11 +29,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if @user
+    #if @user
       erb :account
-    else
+    #else
       "You must log in before viewing this page."
-    end
+    #end
   end
 
   get '/logout' do
