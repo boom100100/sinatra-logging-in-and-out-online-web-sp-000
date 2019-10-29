@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 
       redirect to '/account'
     else
-      redirect to '/error'
+      erb :error
     end
 
   end
@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
     if Helpers.is_logged_in?
       erb :account
     else
-      redirect to '/error'
+      erb :error
     end
   end
 
