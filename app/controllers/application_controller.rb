@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    #session[:user_id] = User.find(params[:username]).id
+    session[:user_id] = Helpers.current_user(session).id
     #@user = Helpers.current_user(session)
     #if @user
 
