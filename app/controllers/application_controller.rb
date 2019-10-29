@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if User.find(session[:user_id])
+    if @user
       erb :account
     else
       "You must log in before viewing this page."
